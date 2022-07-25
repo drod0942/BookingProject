@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Verdana, sans-serif;
     margin: 0;
@@ -7,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 64px;
-    background-color: #1F2937;
+    background-color: #6f8f72;
     color: #F9FAF8;
 }
 ul, a {
@@ -37,7 +39,7 @@ ul, a {
     min-height: 300px;
     justify-content: space-between;
     align-items: center;
-    background-color: #1F2937;
+    background-color: #6f8f72;
     flex-wrap: wrap;
 }
 .readableContent {
@@ -48,20 +50,20 @@ ul, a {
 
 }
 .heading {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 900;
     color: #F9FAF8;
 
 }
 .subheading {
-    font-size: 18px;
+    font-size: 24px;
     color: #E5E7EB
 }
 .topButton {
-    background-color: #3882F6;
-    font-size: 18px;
+    background-color: #8fd694;
+    font-size: 24px;
     color: #F9FAF8;
-    max-width: 125px;
+    max-width: 167px;
     border-radius: 8px;
     padding: 8px;
     font-weight: bold;
@@ -69,11 +71,11 @@ ul, a {
 
 }
 .topButton:hover {
-    background-color: #3881f6b4;
+    background-color: #7dba84;
 
 }
 .topButton:active {
-    background-color: #3881f68e;
+    background-color: #77ad78;
 
 }
 .siteImg {
@@ -83,7 +85,7 @@ ul, a {
 }
 
 /* section 2 */
-.sec2 {
+#sec2 {
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -104,7 +106,7 @@ ul, a {
 .box {
     width: 200px;
     height: 200px;
-    border-color: #3882F6;
+    border-color: #8fd694;
     border-style: solid;
     border-radius: 8px;
 }
@@ -114,23 +116,33 @@ ul, a {
 }
 
 /* section 3 */
-
-.quoteSec {
+#sec3 {
     background-color: #E5E7EB;
-    min-height: 400px;
+    /* min-height: 400px; */
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 64px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#sec3t {
+    background-color: #E5E7EB;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 16px;
     padding: 64px;
+    flex: 1 1 0;
 }
 
 /* section 4 */
-.sec4 {
+#sec4 {
     display: flex;
     margin: 64px;
     padding: 32px 128px 32px 128px;
-    background-color: #3882F6;
+    background-color: #8fd694;
     border-radius: 8px;
     flex-wrap: wrap;
     gap: 16px;
@@ -138,7 +150,7 @@ ul, a {
     justify-content: center;
 }
 .bottomButton {
-    background-color: #3882F6;
+    background-color: #8fd694;
     font-size: 18px;
     color: #F9FAF8;
     border-radius: 8px;
@@ -164,6 +176,6 @@ ul, a {
 footer {
     text-align: center;
     color: #F9FAF8;
-    background-color: #1F2937;
+    background-color: #638372;
     padding: 16px;
 }
