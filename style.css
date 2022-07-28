@@ -216,7 +216,8 @@ ul, a {
 .name{
     text-align: center;
     margin-top: 2em;
-    font-family: 'Philosopher', sans-serif;}
+    font-family: 'Philosopher', sans-serif;
+}
 .loc{
     margin-top: 3em;
     margin-left: 2.5em;
@@ -239,7 +240,7 @@ ul, a {
 }
 
 .w-days{
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Philosopher', sans-serif;
     text-align: right;
     color: #ffffff;
     margin-right: 5px;
