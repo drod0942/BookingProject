@@ -181,33 +181,71 @@ ul, a {
 
 /* BASIC MANICURE STYLYING ************************************************/
 
-.game-container{
-    background-color: rgb(35, 103, 167);
-    margin: 3em;
+.cal-container{
+    background-color: #6f8f72;
+    margin:auto;
+    position: relative;
+    top: 50px;
     padding: 2em;
     border-radius: 25px;
+    width: 85%;
 }
 
 .grid{
     display: grid;
-    margin-top: 25px;
-    background: rgb(23, 67, 109) ;
+    background: #6f8f72 ;
+    margin-top: 15px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-gap: 6px;
 }
 
 .grid-cell{
   display: flex;
-  justify-content: center;
-  align-items: center;
     height: 100px;
     width: auto;
-    background: rgb(35, 103, 167);
+    background: #6f8f72;
     cursor: pointer;
+    border: solid #556e58 1px;
 }
 
+.grid-cell:hover{
 
+    background: #556e58;
+}
+
+.name{
+    text-align: center;
+    margin-top: 1.5em;
+}
+.loc{
+    margin-top: 3em;
+    margin-left: 2em;
+}
+
+.title{
+    color: #ffffff;
+}
+
+.nums{
+    
+    position: relative;
+    top: 4px;
+    margin-left: auto; 
+    margin-right: 4px;
+    font-size: 13px;
+    color: black;
+}
+
+.out{
+    color: rgb(80, 80, 80);
+}
+
+.void{
+    cursor: not-allowed;
+}
+.void:hover{
+    background: #6f8f72;
+}
 
 /* footer */
 
