@@ -1,9 +1,16 @@
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: Verdana, sans-serif;
     margin: 0;
 }
+
+
 /* header */
 header {
     display: flex;
@@ -170,6 +177,37 @@ ul, a {
     font-size: 18px;
     color: #E5E7EB
 }
+
+
+/* BASIC MANICURE STYLYING ************************************************/
+
+.game-container{
+    background-color: rgb(35, 103, 167);
+    margin: 3em;
+    padding: 2em;
+    border-radius: 25px;
+}
+
+.grid{
+    display: grid;
+    margin-top: 25px;
+    background: rgb(23, 67, 109) ;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 6px;
+}
+
+.grid-cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    height: 100px;
+    width: auto;
+    background: rgb(35, 103, 167);
+    cursor: pointer;
+}
+
+
 
 /* footer */
 
