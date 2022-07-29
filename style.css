@@ -273,8 +273,8 @@ ul, a {
 
 .pop-cont{
     position: relative;
-    width: 500px;
-    height: 300px;
+    width: 45%;
+    height: 75%;
     border-radius: 10px;
     background-color: white;
 }
@@ -287,6 +287,62 @@ ul, a {
     transform: rotate(45deg);
     cursor: pointer;
 }
+
+
+
+/* STYLE FOR THE POP IP BOX */
+
+.f-name{
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+  div.elem-group {
+    margin: 25px;
+  }
+  
+  
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.10em;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.10em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+  }
+
+  
+  textarea {
+    height: 100px;
+  }
+  
+  
+  button {
+    height: 50px;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.10em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 2px solid black;
+  }
 
 /* footer */
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Philosopher&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../../style.css">
     <title>Basic Booking</title>
 </head>
@@ -145,6 +146,40 @@
     <div class="bg-cont">
         <div class="pop-cont">
             <div class="close">+</div>
+
+            <form>
+                <h1 class="f-name">Client Information:</h1>
+                <div class="elem-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+                <div class="elem-group">
+                    <label for="phone">Your Phone</label>
+                    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                </div>
+                <div class="elem-group">
+                    <label for="dates">Dates Avaliable</label>
+                    <input type="date" id="dates" name="dates" required>
+                  </div>
+                <div class="elem-group">
+
+                    <label for="time-selection">Select Time Preference</label>
+
+                    <select id="time-selection" name="time_preference" required>
+                        <option value="">Choose a Time from the List</option>
+                        <option value="m1"></option> <!-- 10:00 - 10:15 (5)-->
+                        <option value="m2"></option> <!-- 10:30 - 10:45 (5)-->
+                        <option value="m3"></option> <!-- 11:00 - 11:15 (5)-->
+                        <option value="m4"></option> <!-- 11:30 - 11:45 (5)-->
+                        <option value="m5"></option> <!-- 1:00 - 1:15 (5)-->
+                        <option value="m6"></option> <!-- 1:30 - 1:45 (5)-->
+                    </select>
+
+                  </div>
+
+                  <button type="submit">Book Appointment</button>
+
+            </form>
 
         </div>
     </div>
