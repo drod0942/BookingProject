@@ -148,7 +148,6 @@ for (const cellD of cellDivs) {
                     // Retrieve the object from storage
                     let day2 = localStorage.getItem("spot2");
                     let index2 = parseInt(localStorage.getItem("CIndex2"));  
-                    console.log(index2);
                     day2 = JSON.parse(day2);
                     
                     //Adding Name and Phone to Object in LocalStorage
@@ -1060,7 +1059,6 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
     
                             if (day15[event.target.value] >= 0) {
     
@@ -1087,7 +1085,6 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
                         break;
                     case '2022-08-16':
                         if (localStorage.getItem('spot16') == null) //if it isnt existent
@@ -1226,28 +1223,27 @@ for (const cellD of cellDivs) {
                       console.log(localStorage);
                     break;
                     case '2022-08-18':
-                        if (localStorage.getItem('spot1') == null) //if it isnt existent
+                        if (localStorage.getItem('spot18') == null) //if it isnt existent
                         {
-                            let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                            let spot18 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                             // Put the object into storage
-                            localStorage.setItem('spot1', JSON.stringify(spot1));
-                            localStorage.setItem('AvaliableSpots1', 30);
-                            localStorage.setItem('CIndex', 1);
+                            localStorage.setItem('spot18', JSON.stringify(spot18));
+                            localStorage.setItem('AvaliableSpots18', 30);
+                            localStorage.setItem('CIndex18', 1);
                         }
         
                         // Retrieve the object from storage
-                        let day1 = localStorage.getItem("spot1");
-                        let index = parseInt(localStorage.getItem("CIndex"));  
-                        console.log(index);
-                        day1 = JSON.parse(day1);
+                        let day18 = localStorage.getItem("spot18");
+                        let index18 = parseInt(localStorage.getItem("CIndex18"));  
+                        day18 = JSON.parse(day18);
                         
                         //Adding Name and Phone to Object in LocalStorage
-                        let CName = document.querySelector('#name').value;
-                        let CPhone = document.querySelector('#phone').value;
+                        let CName18 = document.querySelector('#name').value;
+                        let CPhone18 = document.querySelector('#phone').value;
     
-                        localStorage.setItem('Client-Name' + index , CName);
-                        localStorage.setItem('Client-Phone' + index , CPhone);
-                        localStorage.setItem('CIndex', (index + 1));
+                        localStorage.setItem('Client-Name18' + index18 , CName18);
+                        localStorage.setItem('Client-Phone18' + index18 , CPhone18);
+                        localStorage.setItem('CIndex18', (index18 + 1));
     
                         option1 = document.querySelector('#opt1');
                         option2 = document.querySelector('#opt2');
@@ -1256,28 +1252,28 @@ for (const cellD of cellDivs) {
                         option5 = document.querySelector('#opt5');
                         option6 = document.querySelector('#opt6');
     
-                        option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                        option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                        option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                        option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                        option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                        option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                        option1.innerHTML = `10:00 - 10:15 (${day18['m1']})`;
+                        option2.innerHTML = `10:30 - 10:45 (${day18['m2']})`;
+                        option3.innerHTML = `11:00 - 11:15 (${day18['m3']})`;
+                        option4.innerHTML = `11:30 - 11:45 (${day18['m4']})`;
+                        option5.innerHTML = `1:00 - 1:15 (${day18['m5']})`;
+                        option6.innerHTML = `1:30 - 1:45 (${day18['m6']})`;
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
                             console.log(event.target.value);
     
-                            if (day1[event.target.value] >= 0) {
+                            if (day18[event.target.value] >= 0) {
     
                                 bookBtn.addEventListener("click", function() 
                                 {
-                                    day1[event.target.value] =  day1[event.target.value] - 1;
-                                    localStorage.setItem('spot1', JSON.stringify(day1));
-                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                    localStorage.setItem('AvaliableSpots1', new_spots);
+                                    day18[event.target.value] =  day18[event.target.value] - 1;
+                                    localStorage.setItem('spot18', JSON.stringify(day18));
+                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots18')) - 1;
+                                    localStorage.setItem('AvaliableSpots18', new_spots);
     
-                                    let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                    let avals = document.querySelector('#bx18').querySelector('.aval-sp');
+                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots18"));
                                     avals.innerHTML = `${avaliableS}`;
     
     
@@ -1295,28 +1291,27 @@ for (const cellD of cellDivs) {
                           console.log(localStorage);
                         break;
                     case '2022-08-19':
-                        if (localStorage.getItem('spot1') == null) //if it isnt existent
+                        if (localStorage.getItem('spot19') == null) //if it isnt existent
                         {
-                            let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                            let spot19 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                             // Put the object into storage
-                            localStorage.setItem('spot1', JSON.stringify(spot1));
-                            localStorage.setItem('AvaliableSpots1', 30);
-                            localStorage.setItem('CIndex', 1);
+                            localStorage.setItem('spot19', JSON.stringify(spot19));
+                            localStorage.setItem('AvaliableSpots19', 30);
+                            localStorage.setItem('CIndex19', 1);
                         }
         
                         // Retrieve the object from storage
-                        let day1 = localStorage.getItem("spot1");
-                        let index = parseInt(localStorage.getItem("CIndex"));  
-                        console.log(index);
-                        day1 = JSON.parse(day1);
+                        let day19 = localStorage.getItem("spot19");
+                        let index19 = parseInt(localStorage.getItem("CIndex19"));  
+                        day19 = JSON.parse(day19);
                         
                         //Adding Name and Phone to Object in LocalStorage
-                        let CName = document.querySelector('#name').value;
-                        let CPhone = document.querySelector('#phone').value;
+                        let CName19 = document.querySelector('#name').value;
+                        let CPhone19 = document.querySelector('#phone').value;
     
-                        localStorage.setItem('Client-Name' + index , CName);
-                        localStorage.setItem('Client-Phone' + index , CPhone);
-                        localStorage.setItem('CIndex', (index + 1));
+                        localStorage.setItem('Client-Name19' + index19 , CName19);
+                        localStorage.setItem('Client-Phone19' + index19 , CPhone19);
+                        localStorage.setItem('CIndex19', (index19 + 1));
     
                         option1 = document.querySelector('#opt1');
                         option2 = document.querySelector('#opt2');
@@ -1325,28 +1320,28 @@ for (const cellD of cellDivs) {
                         option5 = document.querySelector('#opt5');
                         option6 = document.querySelector('#opt6');
     
-                        option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                        option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                        option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                        option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                        option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                        option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                        option1.innerHTML = `10:00 - 10:15 (${day19['m1']})`;
+                        option2.innerHTML = `10:30 - 10:45 (${day19['m2']})`;
+                        option3.innerHTML = `11:00 - 11:15 (${day19['m3']})`;
+                        option4.innerHTML = `11:30 - 11:45 (${day19['m4']})`;
+                        option5.innerHTML = `1:00 - 1:15 (${day19['m5']})`;
+                        option6.innerHTML = `1:30 - 1:45 (${day19['m6']})`;
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
                             console.log(event.target.value);
     
-                            if (day1[event.target.value] >= 0) {
+                            if (day19[event.target.value] >= 0) {
     
                                 bookBtn.addEventListener("click", function() 
                                 {
-                                    day1[event.target.value] =  day1[event.target.value] - 1;
-                                    localStorage.setItem('spot1', JSON.stringify(day1));
-                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                    localStorage.setItem('AvaliableSpots1', new_spots);
+                                    day19[event.target.value] =  day19[event.target.value] - 1;
+                                    localStorage.setItem('spot19', JSON.stringify(day19));
+                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots19')) - 1;
+                                    localStorage.setItem('AvaliableSpots19', new_spots);
     
-                                    let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                    let avals = document.querySelector('#bx19').querySelector('.aval-sp');
+                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots19"));
                                     avals.innerHTML = `${avaliableS}`;
     
     
@@ -1364,28 +1359,28 @@ for (const cellD of cellDivs) {
                           console.log(localStorage);
                         break;
                     case '2022-08-20':
-                        if (localStorage.getItem('spot1') == null) //if it isnt existent
+                        if (localStorage.getItem('spot20') == null) //if it isnt existent
                         {
-                            let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                            let spot20 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                             // Put the object into storage
-                            localStorage.setItem('spot1', JSON.stringify(spot1));
-                            localStorage.setItem('AvaliableSpots1', 30);
-                            localStorage.setItem('CIndex', 1);
+                            localStorage.setItem('spot20', JSON.stringify(spot20));
+                            localStorage.setItem('AvaliableSpots20', 30);
+                            localStorage.setItem('CIndex20', 1);
                         }
         
                         // Retrieve the object from storage
-                        let day1 = localStorage.getItem("spot1");
-                        let index = parseInt(localStorage.getItem("CIndex"));  
-                        console.log(index);
-                        day1 = JSON.parse(day1);
+                        let day20 = localStorage.getItem("spot20");
+                        let index20 = parseInt(localStorage.getItem("CIndex20"));  
+                        console.log(index20);
+                        day20 = JSON.parse(day20);
                         
                         //Adding Name and Phone to Object in LocalStorage
-                        let CName = document.querySelector('#name').value;
-                        let CPhone = document.querySelector('#phone').value;
+                        let CName20 = document.querySelector('#name').value;
+                        let CPhone20 = document.querySelector('#phone').value;
     
-                        localStorage.setItem('Client-Name' + index , CName);
-                        localStorage.setItem('Client-Phone' + index , CPhone);
-                        localStorage.setItem('CIndex', (index + 1));
+                        localStorage.setItem('Client-Name20' + index20 , CName20);
+                        localStorage.setItem('Client-Phone20' + index20 , CPhone20);
+                        localStorage.setItem('CIndex20', (index20 + 1));
     
                         option1 = document.querySelector('#opt1');
                         option2 = document.querySelector('#opt2');
@@ -1394,28 +1389,28 @@ for (const cellD of cellDivs) {
                         option5 = document.querySelector('#opt5');
                         option6 = document.querySelector('#opt6');
     
-                        option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                        option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                        option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                        option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                        option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                        option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                        option1.innerHTML = `10:00 - 10:15 (${day20['m1']})`;
+                        option2.innerHTML = `10:30 - 10:45 (${day20['m2']})`;
+                        option3.innerHTML = `11:00 - 11:15 (${day20['m3']})`;
+                        option4.innerHTML = `11:30 - 11:45 (${day20['m4']})`;
+                        option5.innerHTML = `1:00 - 1:15 (${day20['m5']})`;
+                        option6.innerHTML = `1:30 - 1:45 (${day20['m6']})`;
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
                             console.log(event.target.value);
     
-                            if (day1[event.target.value] >= 0) {
+                            if (day20[event.target.value] >= 0) {
     
                                 bookBtn.addEventListener("click", function() 
                                 {
-                                    day1[event.target.value] =  day1[event.target.value] - 1;
-                                    localStorage.setItem('spot1', JSON.stringify(day1));
-                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                    localStorage.setItem('AvaliableSpots1', new_spots);
+                                    day20[event.target.value] =  day20[event.target.value] - 1;
+                                    localStorage.setItem('spot20', JSON.stringify(day20));
+                                    let new_spots =  parseInt(localStorage.getItem('AvaliableSpots20')) - 1;
+                                    localStorage.setItem('AvaliableSpots20', new_spots);
     
-                                    let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                    let avals = document.querySelector('#bx20').querySelector('.aval-sp');
+                                    let avaliableS = parseInt(localStorage.getItem("AvaliableSpots20"));
                                     avals.innerHTML = `${avaliableS}`;
     
     
@@ -1433,28 +1428,27 @@ for (const cellD of cellDivs) {
                           console.log(localStorage);
                             break;
                     case '2022-08-21':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot21') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot21 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot21', JSON.stringify(spot21));
+                                localStorage.setItem('AvaliableSpots21', 30);
+                                localStorage.setItem('CIndex21', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day21 = localStorage.getItem("spot21");
+                            let index21 = parseInt(localStorage.getItem("CIndex21"));  
+                            day21 = JSON.parse(day21);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName21 = document.querySelector('#name').value;
+                            let CPhone21 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name21' + index21 , CName21);
+                            localStorage.setItem('Client-Phone21' + index21 , CPhone21);
+                            localStorage.setItem('CIndex21', (index21 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1463,28 +1457,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day21['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day21['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day21['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day21['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day21['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day21['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day21[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day21[event.target.value] =  day21[event.target.value] - 1;
+                                        localStorage.setItem('spot21', JSON.stringify(day21));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots21')) - 1;
+                                        localStorage.setItem('AvaliableSpots21', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx21').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots21"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1502,28 +1496,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                             break;                    
                     case '2022-08-22':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot22') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot22 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot22', JSON.stringify(spot22));
+                                localStorage.setItem('AvaliableSpots22', 30);
+                                localStorage.setItem('CIndex22', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day22 = localStorage.getItem("spot22");
+                            let index22 = parseInt(localStorage.getItem("CIndex22"));  
+                            day22 = JSON.parse(day22);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName22 = document.querySelector('#name').value;
+                            let CPhone22 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name22' + index22 , CName22);
+                            localStorage.setItem('Client-Phone22' + index22 , CPhone22);
+                            localStorage.setItem('CIndex22', (index22 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1532,28 +1525,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day22['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day22['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day22['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day22['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day22['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day22['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day22[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day22[event.target.value] =  day22[event.target.value] - 1;
+                                        localStorage.setItem('spot22', JSON.stringify(day22));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots22')) - 1;
+                                        localStorage.setItem('AvaliableSpots22', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx22').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots22"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1573,26 +1566,25 @@ for (const cellD of cellDivs) {
                     case '2022-08-23':
                             if (localStorage.getItem('spot1') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot23 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot23', JSON.stringify(spot23));
+                                localStorage.setItem('AvaliableSpots23', 30);
+                                localStorage.setItem('CIndex23', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day23 = localStorage.getItem("spot23");
+                            let index23 = parseInt(localStorage.getItem("CIndex23"));  
+                            day23 = JSON.parse(day23);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName23 = document.querySelector('#name').value;
+                            let CPhone23 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name23' + index23 , CName23);
+                            localStorage.setItem('Client-Phone23' + index23 , CPhone23);
+                            localStorage.setItem('CIndex23', (index23 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1601,28 +1593,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day23['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day23['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day23['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day23['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day23['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day23['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day23[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day23[event.target.value] =  day23[event.target.value] - 1;
+                                        localStorage.setItem('spot23', JSON.stringify(day23));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots23')) - 1;
+                                        localStorage.setItem('AvaliableSpots23', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx23').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots23"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1640,28 +1632,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                
                     case '2022-08-24':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot24') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot24 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot24', JSON.stringify(spot24));
+                                localStorage.setItem('AvaliableSpots24', 30);
+                                localStorage.setItem('CIndex24', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day24 = localStorage.getItem("spot24");
+                            let index24 = parseInt(localStorage.getItem("CIndex24"));  
+                            day24 = JSON.parse(day24);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName24 = document.querySelector('#name').value;
+                            let CPhone24 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name24' + index24 , CName24);
+                            localStorage.setItem('Client-Phone24' + index24 , CPhone24);
+                            localStorage.setItem('CIndex24', (index24 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1670,28 +1661,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day24['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day24['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day24['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day24['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day24['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day24['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day24[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day24[event.target.value] =  day24[event.target.value] - 1;
+                                        localStorage.setItem('spot24', JSON.stringify(day24));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots24')) - 1;
+                                        localStorage.setItem('AvaliableSpots24', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx24').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots24"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1709,28 +1700,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                             break;                   
                     case '2022-08-25':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot25') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot25 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot25', JSON.stringify(spot25));
+                                localStorage.setItem('AvaliableSpots25', 30);
+                                localStorage.setItem('CIndex25', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day25 = localStorage.getItem("spot25");
+                            let index25 = parseInt(localStorage.getItem("CIndex25"));  
+                            day25 = JSON.parse(day25);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName25 = document.querySelector('#name').value;
+                            let CPhone25 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name25' + index25 , CName25);
+                            localStorage.setItem('Client-Phone25' + index25 , CPhone25);
+                            localStorage.setItem('CIndex25', (index25 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1739,28 +1729,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day25['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day25['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day25['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day25['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day25['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day25['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day25[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day25[event.target.value] =  day25[event.target.value] - 1;
+                                        localStorage.setItem('spot25', JSON.stringify(day25));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots25')) - 1;
+                                        localStorage.setItem('AvaliableSpots25', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx25').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots25"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1778,28 +1768,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-26':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot26') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot26 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot26', JSON.stringify(spot26));
+                                localStorage.setItem('AvaliableSpots26', 30);
+                                localStorage.setItem('CIndex26', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day26 = localStorage.getItem("spot26");
+                            let index26 = parseInt(localStorage.getItem("CIndex26"));  
+                            day26 = JSON.parse(day26);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName26 = document.querySelector('#name').value;
+                            let CPhone26 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name26' + index26 , CName26);
+                            localStorage.setItem('Client-Phone26' + index26 , CPhone26);
+                            localStorage.setItem('CIndex26', (index26 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1808,28 +1797,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day26['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day26['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day26['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day26['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day26['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day26['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day26[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day26[event.target.value] =  day26[event.target.value] - 1;
+                                        localStorage.setItem('spot26', JSON.stringify(day26));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots26')) - 1;
+                                        localStorage.setItem('AvaliableSpots26', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx26').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots26"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1847,28 +1836,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-27':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot27') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot27 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot27', JSON.stringify(spot27));
+                                localStorage.setItem('AvaliableSpots27', 30);
+                                localStorage.setItem('CIndex27', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day27 = localStorage.getItem("spot27");
+                            let index27 = parseInt(localStorage.getItem("CIndex27"));  
+                            day27 = JSON.parse(day27);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName27 = document.querySelector('#name').value;
+                            let CPhone27 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name27' + index27 , CName27);
+                            localStorage.setItem('Client-Phone27' + index27 , CPhone27);
+                            localStorage.setItem('CIndex27', (index27 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1877,28 +1865,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day27['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day27['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day27['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day27['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day27['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day27['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day27[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day27[event.target.value] =  day27[event.target.value] - 1;
+                                        localStorage.setItem('spot27', JSON.stringify(day27));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots27')) - 1;
+                                        localStorage.setItem('AvaliableSpots27', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx27').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots27"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1916,28 +1904,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-28':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot28') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot28 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot28', JSON.stringify(spot28));
+                                localStorage.setItem('AvaliableSpots28', 30);
+                                localStorage.setItem('CIndex28', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day28 = localStorage.getItem("spot28");
+                            let index28 = parseInt(localStorage.getItem("CIndex28"));  
+                            day28 = JSON.parse(day28);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName28 = document.querySelector('#name').value;
+                            let CPhone28 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name28' + index28 , CName28);
+                            localStorage.setItem('Client-Phone28' + index28 , CPhone28);
+                            localStorage.setItem('CIndex28', (index28 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -1946,28 +1933,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day28['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day28['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day28['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day28['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day28['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day28['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day28[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day28[event.target.value] =  day28[event.target.value] - 1;
+                                        localStorage.setItem('spot28', JSON.stringify(day28));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots28')) - 1;
+                                        localStorage.setItem('AvaliableSpots28', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx28').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots28"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -1985,28 +1972,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-29':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot29') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot29 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot29', JSON.stringify(spot29));
+                                localStorage.setItem('AvaliableSpots29', 30);
+                                localStorage.setItem('CIndex29', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day29 = localStorage.getItem("spot29");
+                            let index29 = parseInt(localStorage.getItem("CIndex29"));  
+                            day29 = JSON.parse(day29);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName29 = document.querySelector('#name').value;
+                            let CPhone29 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name29' + index29 , CName29);
+                            localStorage.setItem('Client-Phone29' + index29 , CPhone29);
+                            localStorage.setItem('CIndex29', (index29 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -2015,30 +2001,29 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day29['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day29['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day29['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day29['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day29['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day29['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day29[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day29[event.target.value] =  day29[event.target.value] - 1;
+                                        localStorage.setItem('spot29', JSON.stringify(day29));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots29')) - 1;
+                                        localStorage.setItem('AvaliableSpots29', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx29').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots29"));
                                         avals.innerHTML = `${avaliableS}`;
-        
         
                                     });
                                     
@@ -2054,28 +2039,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-30':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot30') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot30 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot30', JSON.stringify(spot30));
+                                localStorage.setItem('AvaliableSpots30', 30);
+                                localStorage.setItem('CIndex30', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day30 = localStorage.getItem("spot30");
+                            let index30 = parseInt(localStorage.getItem("CIndex30"));  
+                            day30 = JSON.parse(day30);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName30 = document.querySelector('#name').value;
+                            let CPhone30 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name30' + index30 , CName30);
+                            localStorage.setItem('Client-Phone30' + index30 , CPhone30);
+                            localStorage.setItem('CIndex30', (index30 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -2084,28 +2068,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day30['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day30['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day30['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day30['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day30['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day30['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day30[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        day30[event.target.value] =  day30[event.target.value] - 1;
+                                        localStorage.setItem('spot30', JSON.stringify(day30));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots30')) - 1;
+                                        localStorage.setItem('AvaliableSpots30', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx30').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots30"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
@@ -2123,28 +2107,27 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                   
                     case '2022-08-31':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot31') == null) //if it isnt existent
                             {
-                                let spot1 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
+                                let spot31 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
-                                localStorage.setItem('spot1', JSON.stringify(spot1));
-                                localStorage.setItem('AvaliableSpots1', 30);
-                                localStorage.setItem('CIndex', 1);
+                                localStorage.setItem('spot31', JSON.stringify(spot31));
+                                localStorage.setItem('AvaliableSpots31', 30);
+                                localStorage.setItem('CIndex31', 1);
                             }
             
                             // Retrieve the object from storage
-                            let day1 = localStorage.getItem("spot1");
-                            let index = parseInt(localStorage.getItem("CIndex"));  
-                            console.log(index);
-                            day1 = JSON.parse(day1);
+                            let day31 = localStorage.getItem("spot1");
+                            let index31 = parseInt(localStorage.getItem("CIndex31"));  
+                            day31 = JSON.parse(day31);
                             
                             //Adding Name and Phone to Object in LocalStorage
-                            let CName = document.querySelector('#name').value;
-                            let CPhone = document.querySelector('#phone').value;
+                            let CName31 = document.querySelector('#name').value;
+                            let CPhone31 = document.querySelector('#phone').value;
         
-                            localStorage.setItem('Client-Name' + index , CName);
-                            localStorage.setItem('Client-Phone' + index , CPhone);
-                            localStorage.setItem('CIndex', (index + 1));
+                            localStorage.setItem('Client-Name31' + index31, CName31);
+                            localStorage.setItem('Client-Phone31' + index31 , CPhone31);
+                            localStorage.setItem('CIndex31', (index31 + 1));
         
                             option1 = document.querySelector('#opt1');
                             option2 = document.querySelector('#opt2');
@@ -2153,28 +2136,28 @@ for (const cellD of cellDivs) {
                             option5 = document.querySelector('#opt5');
                             option6 = document.querySelector('#opt6');
         
-                            option1.innerHTML = `10:00 - 10:15 (${day1['m1']})`;
-                            option2.innerHTML = `10:30 - 10:45 (${day1['m2']})`;
-                            option3.innerHTML = `11:00 - 11:15 (${day1['m3']})`;
-                            option4.innerHTML = `11:30 - 11:45 (${day1['m4']})`;
-                            option5.innerHTML = `1:00 - 1:15 (${day1['m5']})`;
-                            option6.innerHTML = `1:30 - 1:45 (${day1['m6']})`;
+                            option1.innerHTML = `10:00 - 10:15 (${day31['m1']})`;
+                            option2.innerHTML = `10:30 - 10:45 (${day31['m2']})`;
+                            option3.innerHTML = `11:00 - 11:15 (${day31['m3']})`;
+                            option4.innerHTML = `11:30 - 11:45 (${day31['m4']})`;
+                            option5.innerHTML = `1:00 - 1:15 (${day31['m5']})`;
+                            option6.innerHTML = `1:30 - 1:45 (${day31['m6']})`;
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
                                 console.log(event.target.value);
         
-                                if (day1[event.target.value] >= 0) {
+                                if (day31[event.target.value] >= 0) {
         
                                     bookBtn.addEventListener("click", function() 
                                     {
-                                        day1[event.target.value] =  day1[event.target.value] - 1;
-                                        localStorage.setItem('spot1', JSON.stringify(day1));
-                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots1')) - 1;
+                                        day31[event.target.value] =  day31[event.target.value] - 1;
+                                        localStorage.setItem('spot31', JSON.stringify(day31));
+                                        let new_spots =  parseInt(localStorage.getItem('AvaliableSpots31')) - 1;
                                         localStorage.setItem('AvaliableSpots1', new_spots);
         
-                                        let avals = document.querySelector('#bx1').querySelector('.aval-sp');
-                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots1"));
+                                        let avals = document.querySelector('#bx31').querySelector('.aval-sp');
+                                        let avaliableS = parseInt(localStorage.getItem("AvaliableSpots31"));
                                         avals.innerHTML = `${avaliableS}`;
         
         
