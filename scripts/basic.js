@@ -60,7 +60,7 @@ for (const cellD of cellDivs) {
         }
 
         //this gets the selected date
-        const input = document.querySelector('#dates');;
+        const input = document.querySelector('#dates');
 
         input.onchange = (e) => {
 
@@ -105,7 +105,6 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
 
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
 
                             if (day1[event.target.value] >= 0) {
 
@@ -1190,7 +1189,6 @@ for (const cellD of cellDivs) {
                                 let avals = document.querySelector('#bx17').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("AvaliableSpots17"));
                                 avals.innerHTML = `${avaliableS}`;
-    
     
                             });
                             

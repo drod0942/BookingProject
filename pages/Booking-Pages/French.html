@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Philosopher&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="../../style.css">
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:"https://api.apispreadsheets.com/data/82aIM1uB8NZ1X1yZ/",
+                    type:"post",
+                    data:$("#dataF").serializeArray()
+                });
+            }
+        </script>
     <title>French Booking</title>
 </head>
 <body>
@@ -241,7 +254,7 @@
         <div class="pop-cont">
             <div class="close">+</div>
 
-            <form>
+            <form id="dataF">
                 <h1 class="f-name">Client Information:</h1>
                 <div class="elem-group">
                     <label for="name">Your Name</label>
@@ -271,7 +284,7 @@
 
                   </div>
 
-                  <button id="sub-btn" type="submit">Book Appointment</button>
+                  <button onclick='SubForm()' id="sub-btn" type="submit">Book Appointment</button>
 
             </form>
 
