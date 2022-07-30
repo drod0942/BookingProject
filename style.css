@@ -204,6 +204,7 @@ ul, a {
     height: 100px;
     width: auto;
     background: #6f8f72;
+    flex-direction: column;
     cursor: pointer;
     border: solid #556e58 1px;
 }
@@ -343,6 +344,24 @@ ul, a {
   button:hover {
     border: 2px solid black;
   }
+
+#bx1, #bx2, #bx3, #bx4, #bx5, #bx6, #bx7, #bx8, #bx9, #bx10, #bx11, #bx12, #bx13, #bx14, #bx15, #bx16, #bx17, #bx18, #bx19, #bx20, #bx21, #bx22, #bx23, #bx24, #bx25, #bx26, #bx27, #bx28, #bx29, #bx30, #bx31{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(60, 84, 100);
+    margin: auto;
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+}
+
+#bx1, #bx2, #bx3, #bx4, #bx5, #bx6, #bx7, #bx8, #bx9, #bx10, #bx11, #bx12, #bx13, #bx14, #bx15, #bx16, #bx17, #bx18, #bx19, #bx20, #bx21, #bx22, #bx23, #bx24, #bx25, #bx26, #bx27, #bx28, #bx29, #bx30, #bx31 span{
+    font-size: 13px;
+    font-family: 'Philosopher', sans-serif;
+    color: #ffffff;
+}
+
 
 /* footer */
 
