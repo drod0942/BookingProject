@@ -16,6 +16,7 @@ var AvalD = document.querySelector("#dates");
 AvalD.setAttribute("min", dateTomorrow);
 
 
+
 // Code for opening the popup
 const cellDivs = document.querySelectorAll('.grid-cell');
 const bgO = document.querySelector('.bg-cont');
@@ -78,7 +79,6 @@ for (const cellD of cellDivs) {
                         // Retrieve the object from storage
                         let day1 = localStorage.getItem("spot1");
                         let index = parseInt(localStorage.getItem("CIndex"));  
-                        console.log(index);
                         day1 = JSON.parse(day1);
                         
                         //Adding Name and Phone to Object in LocalStorage
@@ -132,7 +132,6 @@ for (const cellD of cellDivs) {
 
                             }
                           });
-                          console.log(localStorage);
                         break;
 
                 case '2022-08-02':
@@ -242,7 +241,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day3[event.target.value] >= 0) {
 
@@ -269,7 +267,6 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
                     break;
                 case '2022-08-04':
                     if (localStorage.getItem('spot4') == null) //if it isnt existent
@@ -284,7 +281,6 @@ for (const cellD of cellDivs) {
                     // Retrieve the object from storage
                     let day4 = localStorage.getItem("spot4");
                     let index4 = parseInt(localStorage.getItem("CIndex4"));  
-                    console.log(index);
                     day4 = JSON.parse(day4);
                     
                     //Adding Name and Phone to Object in LocalStorage
@@ -311,7 +307,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day4[event.target.value] >= 0) {
 
@@ -447,7 +442,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day6[event.target.value] >= 0) {
 
@@ -474,8 +468,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
-                    break;
+                      break;
                 case '2022-08-07':
                     if (localStorage.getItem('spot7') == null) //if it isnt existent
                     {
@@ -516,7 +509,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day7[event.target.value] >= 0) {
 
@@ -652,7 +644,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day9[event.target.value] >= 0) {
 
@@ -720,7 +711,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day10[event.target.value] >= 0) {
 
@@ -787,7 +777,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day11[event.target.value] >= 0) {
 
@@ -882,7 +871,6 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
                         break;
                     case '2022-08-13':
                         if (localStorage.getItem('spot13') == null) //if it isnt existent
@@ -950,7 +938,6 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
                         break;
                     case '2022-08-14':
                         if (localStorage.getItem('spot14') == null) //if it isnt existent
@@ -991,8 +978,7 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
-    
+                                                        
                             if (day14[event.target.value] >= 0) {
     
                                 bookBtn.addEventListener("click", function() 
@@ -1125,7 +1111,6 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
     
                             if (day16[event.target.value] >= 0) {
     
@@ -1152,7 +1137,6 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
                         break;
                     case '2022-08-17': 
                     if (localStorage.getItem('spot17') == null) //if it isnt existent
@@ -1193,7 +1177,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
     
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
     
                         if (day17[event.target.value] >= 0) {
     
@@ -1220,7 +1203,6 @@ for (const cellD of cellDivs) {
     
                         }
                       });
-                      console.log(localStorage);
                     break;
                     case '2022-08-18':
                         if (localStorage.getItem('spot18') == null) //if it isnt existent
@@ -1261,7 +1243,6 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
     
                             if (day18[event.target.value] >= 0) {
     
@@ -1356,7 +1337,6 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
                         break;
                     case '2022-08-20':
                         if (localStorage.getItem('spot20') == null) //if it isnt existent
@@ -1371,7 +1351,6 @@ for (const cellD of cellDivs) {
                         // Retrieve the object from storage
                         let day20 = localStorage.getItem("spot20");
                         let index20 = parseInt(localStorage.getItem("CIndex20"));  
-                        console.log(index20);
                         day20 = JSON.parse(day20);
                         
                         //Adding Name and Phone to Object in LocalStorage
@@ -1398,7 +1377,6 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
     
                             if (day20[event.target.value] >= 0) {
     
@@ -1466,7 +1444,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day21[event.target.value] >= 0) {
         
@@ -1534,7 +1511,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day22[event.target.value] >= 0) {
         
@@ -1564,7 +1540,7 @@ for (const cellD of cellDivs) {
                               console.log(localStorage);
                                 break;                    
                     case '2022-08-23':
-                            if (localStorage.getItem('spot1') == null) //if it isnt existent
+                            if (localStorage.getItem('spot23') == null) //if it isnt existent
                             {
                                 let spot23 = { 'm1': '5', 'm2': '5', 'm3': '5', 'm4': '5', 'm5': '5', 'm6': '5'};
                                 // Put the object into storage
@@ -1602,7 +1578,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day23[event.target.value] >= 0) {
         
@@ -1874,7 +1849,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day27[event.target.value] >= 0) {
         
@@ -1942,7 +1916,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day28[event.target.value] >= 0) {
         
@@ -2117,7 +2090,7 @@ for (const cellD of cellDivs) {
                             }
             
                             // Retrieve the object from storage
-                            let day31 = localStorage.getItem("spot1");
+                            let day31 = localStorage.getItem("spot31");
                             let index31 = parseInt(localStorage.getItem("CIndex31"));  
                             day31 = JSON.parse(day31);
                             
@@ -2145,7 +2118,6 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
         
                                 if (day31[event.target.value] >= 0) {
         
@@ -2154,7 +2126,7 @@ for (const cellD of cellDivs) {
                                         day31[event.target.value] =  day31[event.target.value] - 1;
                                         localStorage.setItem('spot31', JSON.stringify(day31));
                                         let new_spots =  parseInt(localStorage.getItem('AvaliableSpots31')) - 1;
-                                        localStorage.setItem('AvaliableSpots1', new_spots);
+                                        localStorage.setItem('AvaliableSpots31', new_spots);
         
                                         let avals = document.querySelector('#bx31').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("AvaliableSpots31"));
