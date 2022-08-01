@@ -484,3 +484,46 @@ footer {
     background-color: #638372;
     padding: 16px;
 }
+
+
+
+@media screen and (max-width: 1028px){
+
+      
+}
+
+
+@media screen and (max-width: 768px){
+
+    .l{
+        display: none;
+      }
+      .hbi{
+        display: inline-block;
+      }
+      nav ul .logo{
+        font-size: 22px;
+      }
+      .logo_{
+        left: 20px;
+      }
+    
+      #hamburger-icon {
+        display: block;
+      }
+    
+      nav li{
+       margin-inline-end: 20px;
+      }
+      
+
+}
+
+@media screen and (max-width: 576px){
+
+
+          
+}
+
+@media screen and (max-height: 590px){
+}
