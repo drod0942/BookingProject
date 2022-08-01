@@ -5,15 +5,15 @@
     padding: 0;
 }
 
-body {
-    font-family: Verdana, sans-serif;
+body, html {
+    height: 100%;
     margin: 0;
-}
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+  }
 
-/* header */
 
-
-
+/* Nav bar styling *****************************************************/
 
 .logo{
     text-decoration: none;
@@ -147,6 +147,10 @@ body {
   .hb-links:hover{
     color: #000000;
   }
+
+
+
+
 /* section 1 */
 
 .sec1 {
@@ -195,11 +199,40 @@ body {
     background-color: #77ad78;
 
 }
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 1220ms ease-in;
+  }
+  
+  .fade-in.appear{
+    opacity: 1;
+  }
+
+
 .siteImg {
     width: 100%;
     max-width: 500px;
     flex: 1 1 0;
+    transform: translateX(110%);
 }
+
+.siteImg2 {
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 0;
+}
+
+
+
+
+.siteImg{
+    transition: transform 600ms ease-in;
+  }
+  
+  .siteImg.appear{
+    transform: translateX(0);
+  }
 
 /* section 2 */
 #sec2 {

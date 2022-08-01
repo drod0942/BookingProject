@@ -1,12 +1,12 @@
-
-body {
-    font-family: Verdana, sans-serif;
+body, html {
+    height: 100%;
     margin: 0;
-}
-/* header */
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+  }
 
 
-
+/* Nav bar styling *****************************************************/
 
 .logo{
     text-decoration: none;
