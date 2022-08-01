@@ -91,6 +91,187 @@ ul, a {
     gap: 16px;
 }
 
+
+
+
+/* Services Page STYLYING ************************************************/
+
+.projects-intro-cont{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  
+  }
+
+  .projects-con{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+   align-items: center;
+  }
+  
+  .pro{
+    display: inline-block;
+    width: 25%;
+    height: 50vh;
+    border-radius: 24px 20px 18px 24px;
+    border: double 4px transparent;
+    background-image: linear-gradient(60deg, #1e3c72 0%, #1e3c72 1%, #2a5298 100%), radial-gradient(circle at top left,#ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 4px 8px 10px 4px #888888;
+    transition: all .2s ease-in-out; 
+  }
+  
+  .pro:hover{
+      transform: scale(1.1); 
+  }
+  
+  .background-filter:after {
+    background-color: rgba(75, 75, 75, 0);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    inset-block-start: 0;
+   border-radius: 20px 18px 16px 20px;
+  }
+  
+  .background-filter {
+    position: relative;
+  }
+  
+  .background {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+      background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     border-radius: 20px 18px 16px 20px;
+  }
+  
+  
+  .project-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    font-size: 23.5px;
+    text-align: center;
+    width: 75%;
+    border: 4px solid #fecfef;
+    border-block-start: none;
+    border-inline-start: none;
+    border-inline-end: none;
+    padding-block-end: 10px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: 30%;
+    background-color: rgba(0,0,0, 0.65); /* Black w/opacity/see-through */
+    color: white;
+     font-family: 'Montserrat', sans-serif;
+  }
+  
+  .pro1-img{
+    background-image: url(../resources/BasicM.jpeg);
+  }
+  .pro2-img{
+    background-image: url(../resources/FrenchM.jpeg);
+  }
+  .pro3-img{
+    background-image: url(../resources/AcryM.jpeg);
+  }
+  
+  .projects-intro{
+      display: block;
+    position: relative;
+    width: 210px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    font-size: 38px;
+    font-family: 'Josefin Sans','Kaushan Script', cursive;
+  }
+  
+  
+  .projects-intro:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .projects-intro:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .Bookbutton {
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: rgba(0,0,0, 0.65); 
+    border: 2px solid white;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    width: 60%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: 40%;
+     font-family: 'Montserrat', sans-serif;
+  
+  }
+  
+  .Bookbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .Bookbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    inset-block-start: 0;
+    inset-inline-end: -20px;
+    transition: 0.5s;
+  }
+  
+  .Bookbutton:hover span {
+    padding-inline-end: 25px;
+  }
+  
+  .Bookbutton:hover span:after {
+    opacity: 1;
+    inset-inline-end: 0;
+  }
+  
+
+
+
+
+
 /* footer */
 
 footer {
@@ -99,3 +280,55 @@ footer {
     background-color: #638372;
     padding: 16px;
 }
+
+
+@media screen and (max-width: 1028px){
+    .pro{
+       height: 40vh;
+      }
+      
+}
+
+
+@media screen and (max-width: 768px){
+
+
+
+
+    .projects-intro-cont{
+        display: block;
+        width: 100%;
+        height: max-content;
+        margin-block-start: 8%;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    
+      }
+      
+      .projects-con{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height:max-content;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      
+
+    .pro{
+      display: inline-block;
+     width: 55%;
+     height: 40vh;
+    margin: 40px;
+    }
+    
+    
+      .project-titles{
+        font-size: 20px;
+      }
+      
+
+}
+
+
