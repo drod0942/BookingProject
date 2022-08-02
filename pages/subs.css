@@ -248,9 +248,56 @@ body, html {
     padding: 64px;
     flex-wrap: wrap;
     gap: 16px;
+    margin-top: 30px;
+}
+
+#textCont h1{
+  font-family: 'Montserrat', 'Cormorant Garamond', serif;
 }
 
 
+  
+  
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.10em;
+}
+
+input, select, textarea {
+  border-radius: 20px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.10em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+
+textarea {
+  height: 60px;
+}
+
+
+.skip_Submit {
+  height: 50px;
+  display: block;
+  padding: 10px;
+  margin: auto;
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 1.10em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.skip_Submit:hover {
+  border: 2px solid black;
+}
 
 
 
