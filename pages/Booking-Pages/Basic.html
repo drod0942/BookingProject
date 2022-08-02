@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +10,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Philosopher&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
-	<script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script>
-		function SubForm(){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/zwDRuaJ8xR7v8Z3N/",
-				type:"post",
-				data:$("#dataF").serializeArray(),
-			});
-		}
-	</script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/zwDRuaJ8xR7v8Z3N/",
+                type: "post",
+                data: $("#dataF").serializeArray(),
+            });
+        }
+    </script>
     <title>Basic Booking</title>
 </head>
+
 <body>
-    
-    <header class="headerLogo">
-        <div><a href="../../index.html">Lindsey Nails</a></div>
-        <ul class="headerLinks">
-            <li><a href="../services.html">Services</a></li>
-            <li><a href="../../index.html">About</a></li>
-            <li><a href="../../index.html">Booking</a></li>
+
+<header class="headerLogo">
+    <nav>
+        <ul>
+            <li class="logo_"><a class="logo" href="../../index.html">Lindsey Nails</a></li>
+            <li class="l"><a class="link" href="../../index.html">Home</a></li>
+            <li class="l"><a class="link" id="active" href="../services.html">Services</a></li>
+            <li class="hbi">
+                <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu">
+                        <li class="hb-links"><a class="link" href="../../index.html">Home</a></li>
+                        <li class="hb-links"><a class="link" href="../services.html">Services</a></li>
+                      </ul>
+                </div>
+            </li>
         </ul>
-    </header>
+        </nav>
+</header>
 
     <h1 class="name">Basic Manicure Booking </h1>
 
-    <div class="cal-container"> 
+    <div class="cal-container">
 
         <h1 class="title">August 2022</h1>
 
@@ -258,16 +270,18 @@
                 <h1 class="f-name">Client Information:</h1>
                 <div class="elem-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20}
+                        required>
                 </div>
                 <div class="elem-group">
                     <label for="phone">Your Phone</label>
-                    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                    <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872"
+                        pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
                 </div>
                 <div class="elem-group">
                     <label for="dates">Dates Avaliable</label>
                     <input type="date" id="dates" name="dates" max="2022-08-31" required>
-                  </div>
+                </div>
                 <div class="elem-group">
 
                     <label for="time-selection">Select Time Preference</label>
@@ -282,20 +296,24 @@
                         <option id="opt6" value="m6"></option> <!-- 1:30 - 1:45 (5)-->
                     </select>
 
-                  </div>
+                </div>
 
-                  <button onclick='SubForm()' id="sub-btn" type="submit">Book Appointment</button>
+                <button onclick='SubForm()' id="sub-btn" type="submit">Book Appointment</button>
 
             </form>
 
         </div>
     </div>
 
-    <h1 class="loc">Where To Find Us:</h1>
+    <h1 class="loc"></h1>
 
 
- 
-    <script type="text/javascript" src="../../scripts/basic.js"></script> 
-    
+
+    <script type="text/javascript" src="../../scripts/basic.js"></script>
+
+    <footer>
+        <div>Copyright © Lindsey Nails 2022</div>
+    </footer>
 </body>
+
 </html>

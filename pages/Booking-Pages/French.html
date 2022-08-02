@@ -26,14 +26,26 @@
 </head>
 <body>
     
-    <header class="headerLogo">
-        <div><a href="../../index.html">Lindsey Nails</a></div>
-        <ul class="headerLinks">
-            <li><a href="../services.html">Services</a></li>
-            <li><a href="../../index.html">About</a></li>
-            <li><a href="../../index.html">Booking</a></li>
+<header class="headerLogo">
+    <nav>
+        <ul>
+            <li class="logo_"><a class="logo" href="../../index.html">Lindsey Nails</a></li>
+            <li class="l"><a class="link" href="../../index.html">Home</a></li>
+            <li class="l"><a class="link" id="active" href="../services.html">Services</a></li>
+            <li class="hbi">
+                <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu">
+                        <li class="hb-links"><a class="link" href="../../index.html">Home</a></li>
+                        <li class="hb-links"><a class="link" href="../services.html">Services</a></li>
+                      </ul>
+                </div>
+            </li>
         </ul>
-    </header>
+        </nav>
+</header>
 
     <h1 class="name">French Manicure Booking </h1>
 
@@ -291,11 +303,16 @@
         </div>
     </div>
 
-    <h1 class="loc">Where To Find Us:</h1>
+    <h1 class="loc"></h1>
 
 
 
     <script type="text/javascript" src="../../scripts/french.js"></script> 
+
+
+<footer>
+    <div>Copyright © Lindsey Nails 2022</div>
+</footer>
 </body>
 </html>
     
