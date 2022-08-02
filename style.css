@@ -218,6 +218,12 @@ body, html {
 }
 
 .siteImg2 {
+  width: 100%;
+  max-width: 500px;
+  flex: 1 1 0;
+}
+
+.siteImg2 {
     width: 100%;
     max-width: 500px;
     flex: 1 1 0;
