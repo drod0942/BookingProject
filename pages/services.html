@@ -16,36 +16,31 @@
 </head>
 
 <body>
+
     <header class="headerLogo">
-        <div><a href="../index.html">Lindsey Nails</a></div>
-        <ul class="headerLinks">
-            <li><a href="services.html">Services</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="logo_"><a class="logo" href="../index.html">Lindsey Nails</a></li>
+                <li class="l"><a class="link" href="../index.html">About</a></li>
+                <li class="l"><a class="link" id="active" href="services.html">Services</a></li>
+                <li class="l"><a class="link" href="../index.html">Booking</a></li>
+                <li class="hbi">
+                    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <ul class="mobile-menu">
+                            <li class="hb-links"><a class="link" href="services.html">Services</a></li>
+                            <li class="hb-links"><a class="link" href="../index.html">About</a></li>
+                            <li class="hb-links"><a class="link" href="../index.html">Booking</a></li>
+                          </ul>
+                    </div>
+                </li>
+            </ul>
+            </nav>
     </header>
-    <div id="servicesIntro">
-        <!-- <header class="headerLogo"> -->
-            <nav>
-                <ul>
-                    <li class="logo_"><a class="logo" href="../index.html">Lindsey Nails</a></li>
-                    <li class="l"><a class="link" href="../index.html">About</a></li>
-                    <li class="l"><a class="link" id="active" href="services.html">Services</a></li>
-                    <li class="l"><a class="link" href="../index.html">Booking</a></li>
-                    <li class="hbi">
-                        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
-                            <div class="bar3"></div>
-                            <ul class="mobile-menu">
-                                <li class="hb-links"><a class="link" href="services.html">Services</a></li>
-                                <li class="hb-links"><a class="link" href="../index.html">About</a></li>
-                                <li class="hb-links"><a class="link" href="../index.html">Booking</a></li>
-                              </ul>
-                        </div>
-                    </li>
-                </ul>
-                </nav>
-        <!-- </header> -->
-        
+
+    <div id="servicesIntro">        
             <section class="services-title">
                 <div>Let's find something right for you.</div>
                 <a class="moreB" href="#services"><img id="downArrow" src="../resources/down_arrowYT.png"></a>

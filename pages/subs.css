@@ -28,6 +28,11 @@ body, html {
     width: 100%;
   }
   
+.headerLogo{
+  background-color: black;
+  padding-bottom: 5px;
+}
+
   header{
     margin: 0px;
     padding: 0px;
@@ -63,7 +68,7 @@ body, html {
   }
   
   .link:hover{
-      color: #000000;
+      color: #6f8f72;
   }
 
   #active{
@@ -241,6 +246,7 @@ body, html {
     flex-wrap: wrap;
     gap: 16px;
 }
+
 
 
 
