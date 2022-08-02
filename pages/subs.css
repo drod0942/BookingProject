@@ -29,7 +29,7 @@ body, html {
   }
   
 .headerLogo{
-  background-color: black;
+  background-color: transparent;
   padding-bottom: 5px;
 }
 
@@ -54,17 +54,20 @@ body, html {
     padding: 15px;
     font-family: 'Lexend', 'Cormorant Garamond', serif;
     font-size: 18px;
-   margin-inline-end: 53px;
+    margin-inline-end: 53px;
   }
   
   
   
    .link{
     color: white;
+    position: relative;
     text-decoration: none;
     text-align: center;
-   font-family: 'Lexend', 'Cormorant Garamond', serif;
-     font-size: 18px;
+    font-family: 'Lexend', 'Cormorant Garamond', serif;
+    font-size: 18px;
+    z-index: 10;
+    cursor: pointer;
   }
   
   .link:hover{
@@ -147,7 +150,7 @@ body, html {
   
 
 #servicesIntro {
-    display:block;
+    /* display:block; */
     height: 100%; 
     width: 100%;
     position: relative;
