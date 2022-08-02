@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="subs.css">
-    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d6683881d6.js" crossorigin="anonymous"></script>
+    <title>Services</title>
+    
 </head>
 
 <body>
@@ -17,31 +23,64 @@
         </ul>
     </header>
     <div id="servicesIntro">
-        <div>Let's find something right for you.</div>
-        <img id="downArrow" src="../resources/down_arrowYT.png">
-    </div>
+        <!-- <header class="headerLogo"> -->
+            <nav>
+                <ul>
+                    <li class="logo_"><a class="logo" href="../index.html">Lindsey Nails</a></li>
+                    <li class="l"><a class="link" href="../index.html">About</a></li>
+                    <li class="l"><a class="link" id="active" href="services.html">Services</a></li>
+                    <li class="l"><a class="link" href="../index.html">Booking</a></li>
+                    <li class="hbi">
+                        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                            <ul class="mobile-menu">
+                                <li class="hb-links"><a class="link" href="services.html">Services</a></li>
+                                <li class="hb-links"><a class="link" href="../index.html">About</a></li>
+                                <li class="hb-links"><a class="link" href="../index.html">Booking</a></li>
+                              </ul>
+                        </div>
+                    </li>
+                </ul>
+                </nav>
+        <!-- </header> -->
+        
+            <section class="services-title">
+                <div>Let's find something right for you.</div>
+                <a class="moreB" href="#services"><img id="downArrow" src="../resources/down_arrowYT.png"></a>
+            </section>
+        </div>
     <div id="services">
-        <div class="boxes">
-            <div class="description Bm">
-                <a href="Booking-Pages/Basic.html">
-                    <div class="box"></div>
-                </a>
-                <div class="text">Basic Manicure</div>
-            </div>
-            <div class="description Fm">
-                <a href="Booking-Pages/French.html">
-                    <div class="box"></div>
-                </a>
-                <div class="text">French Manicure</div>
-            </div>
-            <div class="description Ac">
-                <a href="Booking-Pages/Acr.html">
-                    <div class="box"></div>
-                </a>
-                <div class="text">Acrylics</div>
+
+
+        <div class="projects-intro-cont">
+            <p class="projects-intro">My Projects</p>
+        
+            <div class="projects-con">
+                <div class="project1 pro">
+                    <div class="background background-filter pro1-img">
+                    <h1 class="project-titles">Basic Manicure</h1>
+                    <button class="Bookbutton" onclick=" window.open('Booking-Pages/Basic.html','_blank')"><span>Book Spot! </span></button></div>
+                </div>
+        
+                <div class="project2 pro">
+                    <div class="background background-filter pro2-img">
+                    <h1 class="project-titles">French Manicure</h1>
+                    <button class="Bookbutton" onclick=" window.open('Booking-Pages/French.html','_blank')"><span>Book Spot! </span></button></div>
+                </div>
+        
+                <div class="project3 pro">
+                    <div class="background background-filter pro3-img">
+                    <h1 class="project-titles">Acrylics Service</h1>
+                    <button class="Bookbutton" onclick=" window.open('Booking-Pages/Acr.html','_blank')" ><span>Book Spot! </span></button></div>
+                </div>
             </div>
         </div>
+
+
     </div>
+
     <div id="other">
         <div id="textCont">
             <h1>Thinking of something else?</h1>
@@ -119,6 +158,11 @@
             </table>
         </form>
     </div>
+    <script>
+        function toggleMobileMenu(menu) {
+        menu.classList.toggle('open');
+    }
+    </script>
 
 </body>
 

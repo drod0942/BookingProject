@@ -5,28 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
+    <title>Lindsey Nails</title>
 </head>
 
 <body>
     <header class="headerLogo">
-        <div><a href="index.html">Lindsey Nails</a></div>
-        <ul class="headerLinks">
-            <li><a href="pages/services.html">Services</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="logo_"><a class="logo" href="index.html">Lindsey Nails</a></li>
+                <li class="l"><a class="link"  id="active" href="index.html">About</a></li>
+                <li class="l"><a class="link" href="pages/services.html">Services</a></li>
+                <li class="l"><a class="link" href="index.html">Booking</a></li>
+                <li class="hbi">
+                    <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <ul class="mobile-menu">
+                            <li class="hb-links"><a class="link" href="index.html">About</a></li>
+                            <li class="hb-links"><a class="link" href="pages/services.html">Services</a></li>
+                            <li class="hb-links"><a class="link" href="index.html">Booking</a></li>
+                          </ul>
+                    </div>
+                </li>
+            </ul>
+            </nav>
     </header>
+
+    <script>
+        function toggleMobileMenu(menu) {
+        menu.classList.toggle('open');
+    }
+    </script>
+
     <div class="sec1">
-        <div class="readableContent">
+        <div class="readableContent fade-in">
             <div class="heading">Around here, nails are more than just a look.</div>
             <div class="subheading">They're art. They're an expression of you, and they should be just as alluring,
                 complex, and captivating as the rest of you.</div>
-            <button class="topButton">Book now</button>
-
-            <!-- Maybe this "Book Now" Could direct them to the services section -->
+            <button class="topButton" onclick=" window.open('pages/services.html','_blank')">Book now</button>
 
         </div>
+<<<<<<< HEAD
         <img src="resources/nails.jpeg" class="siteImg">
+=======
+        <img src="nails.jpeg" class="siteImg slide-in">
+>>>>>>> ed0ba4446795466119dd3ba36a418f7d0284fc2b
     </div>
     <div id="sec2">
         <h2 style="text-align: center; font-size: 36px; font-weight:900;">Just see for yourself.</h2>
@@ -50,7 +77,11 @@
         </div>
     </div>
     <div id="sec3">
+<<<<<<< HEAD
         <img src="resources/nailtech.png" class="siteImg">
+=======
+        <img src="nailtech.png" class="siteImg2">
+>>>>>>> ed0ba4446795466119dd3ba36a418f7d0284fc2b
         <div id="sec3t">
             <div class="quoteText" style="font-size: 36px; font-weight: lighter; font-style: italic;">Art is the
                 ultimate form of self-expression, and nail art is my chosen medium.</div>
@@ -63,12 +94,15 @@
             <div class="heading2">Don't wait! Book a session now!</div>
             <div class="subheading2">Get in touch with us ASAP so we can provide you with the best service!</div>
         </div>
-        <button class="bottomButton">Sign up</button>
+        <button class="bottomButton" onclick=" window.open('pages/services.html','_blank')">Sign up</button>
     </div>
 
     <footer>
         <div>Copyright © Lindsey Nails 2022</div>
     </footer>
+
+    <script type="text/javascript" src="scripts/script.js"></script> 
+
 </body>
 
 </html>
