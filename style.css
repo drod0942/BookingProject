@@ -12,8 +12,7 @@ body, html {
     overflow-x: hidden;
   }
 
-
-/* Nav bar styling *****************************************************/
+/* Nav bar styling **************************************************** */
 
 .logo{
     text-decoration: none;
@@ -25,7 +24,7 @@ body, html {
   
   .logo_ {
       position: absolute;
-      left: 30px;
+      left: 130px;
   }
   
   
@@ -36,10 +35,6 @@ body, html {
     background-color: #6f8f72;
   }
   
-  header{
-    margin: 0px;
-    padding: 0px;
-  } 
   
   nav ul {
     margin: 0px;
