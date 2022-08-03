@@ -439,6 +439,7 @@ line-height: 60px;
     text-align: center;
     margin-top: 2em;
     font-family: 'Philosopher', sans-serif;
+    color: #000000;
 }
 .loc{
     margin-top: 3em;
@@ -650,6 +651,9 @@ footer {
   font-size: 13px;
 }
 
+.siteImg{
+  max-width: 410px;
+}
 
 /* STYLE FOR THE POP IP BOX */
 
@@ -745,7 +749,9 @@ line-height: 60px;
       nav li{
        margin-inline-end: 20px;
       }
-
+.siteImg{
+  max-width: 400px;
+}
 
 .pop-cont{
   position: relative;
