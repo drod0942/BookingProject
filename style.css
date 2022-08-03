@@ -24,7 +24,7 @@ body, html {
   
   .logo_ {
       position: absolute;
-      left: 130px;
+      left: 30px;
   }
   
   
@@ -169,6 +169,7 @@ body, html {
 .heading {
     font-size: 64px;
     font-weight: 900;
+    font-family: 'Josefin Sans','Kaushan Script', cursive;
     color: #F9FAF8;
 
 }
@@ -185,8 +186,9 @@ body, html {
   border-radius: 8px;
   padding: 8px;
   font-weight: bold;
+  font-family: 'Josefin Sans','Kaushan Script', cursive;
   border-style: none;
-
+  margin: 0;
 }
 .topButton:hover {
     background-color: #7dba84;
@@ -255,6 +257,7 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    font-family: 'Lexend', 'Cormorant Garamond', serif;
 }
 .box {
     width: 200px;
@@ -324,12 +327,15 @@ body, html {
 .heading2 {
     font-size: 24px;
     font-weight: 900;
-    color: #F9FAF8;
+    color: #ffffff;
+    font-family: 'Josefin Sans','Kaushan Script', cursive;
+
 
 }
 .subheading2 {
     font-size: 18px;
-    color: #E5E7EB
+    color: #464646;
+    font-family: 'Quicksand', sans-serif; 
 }
 
 
