@@ -317,6 +317,10 @@ line-height: 60px;
     gap: 8px;
     font-family: 'Lexend', 'Cormorant Garamond', serif;
 }
+
+.section:hover{
+  transform: scale(1.1); 
+}
 .box {
     width: 200px;
     height: 200px;
