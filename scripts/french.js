@@ -1,7 +1,9 @@
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
+// Code to hide the days past on date selection
+
+let currentDateTime = new Date();
+let year = currentDateTime.getFullYear();
+let month = (currentDateTime.getMonth() + 1);
+let date = (currentDateTime.getDate() + 1);
 
 if(date < 10) {
   date = '0' + date;
@@ -10,12 +12,32 @@ if(month < 10) {
   month = '0' + month;
 }
 
-var dateTomorrow = year + "-" + month + "-" + date;
-var AvalD = document.querySelector("#dates");
+let dateTomorrow = year + "-" + month + "-" + date;
+let AvalD = document.querySelector("#dates");
 
 AvalD.setAttribute("min", dateTomorrow);
 
+// Code to hide the spots and boxes of days that arent avaliable
+function hiding(){
 
+    let currentDate = currentDateTime.getDate();
+    for (let i = 1; i <= currentDate; i++) {
+    
+        let box = '#bx' + i;
+        let indx = i - 0;
+        let spotsHide = document.querySelector(box);
+        const grids = document.querySelectorAll('.grid-cell');
+    
+        if (grids[indx].classList[1] != 'outPast') {
+            spotsHide.classList.add('hide');
+            grids[indx].classList.add('outPast');
+        }
+    
+        
+    }
+    
+}
+hiding();
 
 // Code for opening the popup
 const cellDivs = document.querySelectorAll('.grid-cell');
@@ -114,7 +136,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot1', JSON.stringify(day1));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots1')) - 1;
                                     localStorage.setItem('FAvaliableSpots1', new_spots);
-
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx1').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots1"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -172,7 +196,6 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
 
                         if (day2[event.target.value] >= 0) {
 
@@ -182,7 +205,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot2', JSON.stringify(day2));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots2')) - 1;
                                 localStorage.setItem('FAvaliableSpots2', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx2').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots2"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -199,7 +224,6 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
                     break;
                 case '2022-08-03':
                     if (localStorage.getItem('Fspot3') == null) //if it isnt existent
@@ -249,7 +273,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot3', JSON.stringify(day3));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots3')) - 1;
                                 localStorage.setItem('FAvaliableSpots3', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx3').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots3"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -315,7 +341,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot4', JSON.stringify(day4));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots4')) - 1;
                                 localStorage.setItem('FAvaliableSpots4', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx4').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots4"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -332,7 +360,6 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
                     break;
                 case '2022-08-05':
                     if (localStorage.getItem('Fspot5') == null) //if it isnt existent
@@ -373,7 +400,7 @@ for (const cellD of cellDivs) {
                     selectTime = document.getElementById('time-selection');
 
                     selectTime.addEventListener('change', function handleChange(event) {
-                        console.log(event.target.value);
+                        
 
                         if (day5[event.target.value] >= 0) {
 
@@ -383,7 +410,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot5', JSON.stringify(day5));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots5')) - 1;
                                 localStorage.setItem('FAvaliableSpots5', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx5').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots5"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -400,7 +429,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
+                      
                     break;
                 case '2022-08-06':
                     if (localStorage.getItem('Fspot6') == null) //if it isnt existent
@@ -450,7 +479,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot6', JSON.stringify(day6));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots6')) - 1;
                                 localStorage.setItem('FAvaliableSpots6', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx6').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots6"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -517,7 +548,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot7', JSON.stringify(day7));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots7')) - 1;
                                 localStorage.setItem('FAvaliableSpots7', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx7').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots7"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -534,7 +567,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
+                      
                     break;
                 case '2022-08-08': 
                 if (localStorage.getItem('Fspot8') == null) //if it isnt existent
@@ -575,7 +608,7 @@ for (const cellD of cellDivs) {
                 selectTime = document.getElementById('time-selection');
 
                 selectTime.addEventListener('change', function handleChange(event) {
-                    console.log(event.target.value);
+                    
 
                     if (day8[event.target.value] >= 0) {
 
@@ -585,7 +618,9 @@ for (const cellD of cellDivs) {
                             localStorage.setItem('Fspot8', JSON.stringify(day8));
                             let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots8')) - 1;
                             localStorage.setItem('FAvaliableSpots8', new_spots);
-
+                            if (new_spots == 0) {
+                                hiding();
+                            }
                             let avals = document.querySelector('#bx8').querySelector('.aval-sp');
                             let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots8"));
                             avals.innerHTML = `${avaliableS}`;
@@ -602,7 +637,7 @@ for (const cellD of cellDivs) {
 
                     }
                   });
-                  console.log(localStorage);
+                  
                 break;
                 case '2022-08-09':
                     if (localStorage.getItem('FFspot9') == null) //if it isnt existent
@@ -652,7 +687,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('FFspot9', JSON.stringify(day9));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots9')) - 1;
                                 localStorage.setItem('FAvaliableSpots9', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx9').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots9"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -669,7 +706,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
+                      
                     break;
                 case '2022-08-10':
                     if (localStorage.getItem('Fspot10') == null) //if it isnt existent
@@ -719,7 +756,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot10', JSON.stringify(day10));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots10')) - 1;
                                 localStorage.setItem('FAvaliableSpots10', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx10').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots10"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -735,7 +774,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
+                      
                     break;
                 case '2022-08-11':
                     if (localStorage.getItem('Fspot11') == null) //if it isnt existent
@@ -785,7 +824,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot11', JSON.stringify(day11));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots11')) - 1;
                                 localStorage.setItem('FAvaliableSpots11', new_spots);
-
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx11').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots11"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -802,7 +843,7 @@ for (const cellD of cellDivs) {
 
                         }
                       });
-                      console.log(localStorage);
+                      
                     break;
                     case '2022-08-12':
                         if (localStorage.getItem('Fspot12') == null) //if it isnt existent
@@ -843,7 +884,7 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
+                            
     
                             if (day12[event.target.value] >= 0) {
     
@@ -853,7 +894,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot12', JSON.stringify(day12));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots12')) - 1;
                                     localStorage.setItem('FAvaliableSpots12', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx12').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots12"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -910,7 +953,7 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
+                            
     
                             if (day13[event.target.value] >= 0) {
     
@@ -920,7 +963,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot13', JSON.stringify(day13));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots13')) - 1;
                                     localStorage.setItem('FAvaliableSpots13', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx13').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots13"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -986,7 +1031,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot14', JSON.stringify(day14));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots14')) - 1;
                                     localStorage.setItem('FAvaliableSpots14', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx14').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots14"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1003,7 +1050,7 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
+                          
                         break;
                     case '2022-08-15':
                         if (localStorage.getItem('Fspot15') == null) //if it isnt existent
@@ -1053,7 +1100,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot15', JSON.stringify(day15));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots15')) - 1;
                                     localStorage.setItem('FAvaliableSpots15', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx15').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots15"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1119,7 +1168,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot16', JSON.stringify(day16));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots16')) - 1;
                                     localStorage.setItem('FAvaliableSpots16', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx16').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots16"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1185,7 +1236,9 @@ for (const cellD of cellDivs) {
                                 localStorage.setItem('Fspot17', JSON.stringify(day17));
                                 let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots17')) - 1;
                                 localStorage.setItem('FAvaliableSpots17', new_spots);
-    
+                                if (new_spots == 0) {
+                                    hiding();
+                                }
                                 let avals = document.querySelector('#bx17').querySelector('.aval-sp');
                                 let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots17"));
                                 avals.innerHTML = `${avaliableS}`;
@@ -1250,7 +1303,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot18', JSON.stringify(day18));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots18')) - 1;
                                     localStorage.setItem('FAvaliableSpots18', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx18').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots18"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1267,7 +1322,7 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
+                          
                         break;
                     case '2022-08-19':
                         if (localStorage.getItem('Fspot19') == null) //if it isnt existent
@@ -1308,7 +1363,7 @@ for (const cellD of cellDivs) {
                         selectTime = document.getElementById('time-selection');
     
                         selectTime.addEventListener('change', function handleChange(event) {
-                            console.log(event.target.value);
+                            
     
                             if (day19[event.target.value] >= 0) {
     
@@ -1318,7 +1373,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot19', JSON.stringify(day19));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots19')) - 1;
                                     localStorage.setItem('FAvaliableSpots19', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx19').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots19"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1384,7 +1441,9 @@ for (const cellD of cellDivs) {
                                     localStorage.setItem('Fspot20', JSON.stringify(day20));
                                     let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots20')) - 1;
                                     localStorage.setItem('FAvaliableSpots20', new_spots);
-    
+                                    if (new_spots == 0) {
+                                        hiding();
+                                    }
                                     let avals = document.querySelector('#bx20').querySelector('.aval-sp');
                                     let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots20"));
                                     avals.innerHTML = `${avaliableS}`;
@@ -1401,7 +1460,7 @@ for (const cellD of cellDivs) {
     
                             }
                           });
-                          console.log(localStorage);
+                          
                             break;
                     case '2022-08-21':
                             if (localStorage.getItem('Fspot21') == null) //if it isnt existent
@@ -1451,7 +1510,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot21', JSON.stringify(day21));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots21')) - 1;
                                         localStorage.setItem('FAvaliableSpots21', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx21').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots21"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1468,7 +1529,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                             break;                    
                     case '2022-08-22':
                             if (localStorage.getItem('Fspot22') == null) //if it isnt existent
@@ -1518,7 +1579,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot22', JSON.stringify(day22));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots22')) - 1;
                                         localStorage.setItem('FAvaliableSpots22', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx22').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots22"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1535,7 +1598,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-23':
                             if (localStorage.getItem('Fspot23') == null) //if it isnt existent
@@ -1585,7 +1648,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot23', JSON.stringify(day23));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots23')) - 1;
                                         localStorage.setItem('FAvaliableSpots23', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx23').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots23"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1602,7 +1667,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                
                     case '2022-08-24':
                             if (localStorage.getItem('Fspot24') == null) //if it isnt existent
@@ -1643,7 +1708,7 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
+                                
         
                                 if (day24[event.target.value] >= 0) {
         
@@ -1653,7 +1718,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot24', JSON.stringify(day24));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots24')) - 1;
                                         localStorage.setItem('FAvaliableSpots24', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx24').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots24"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1670,7 +1737,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                             break;                   
                     case '2022-08-25':
                             if (localStorage.getItem('Fspot25') == null) //if it isnt existent
@@ -1711,7 +1778,7 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
+                                
         
                                 if (day25[event.target.value] >= 0) {
         
@@ -1721,7 +1788,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot25', JSON.stringify(day25));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots25')) - 1;
                                         localStorage.setItem('FAvaliableSpots25', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx25').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots25"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1738,7 +1807,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-26':
                             if (localStorage.getItem('Fspot26') == null) //if it isnt existent
@@ -1779,7 +1848,7 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
+                                
         
                                 if (day26[event.target.value] >= 0) {
         
@@ -1789,7 +1858,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot26', JSON.stringify(day26));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots26')) - 1;
                                         localStorage.setItem('FAvaliableSpots26', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx26').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots26"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1806,7 +1877,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-27':
                             if (localStorage.getItem('Fspot27') == null) //if it isnt existent
@@ -1856,7 +1927,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot27', JSON.stringify(day27));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots27')) - 1;
                                         localStorage.setItem('FAvaliableSpots27', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx27').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots27"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1873,7 +1946,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-28':
                             if (localStorage.getItem('Fspot28') == null) //if it isnt existent
@@ -1923,7 +1996,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot28', JSON.stringify(day28));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots28')) - 1;
                                         localStorage.setItem('FAvaliableSpots28', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx28').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots28"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -1940,7 +2015,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-29':
                             if (localStorage.getItem('Fspot29') == null) //if it isnt existent
@@ -1981,7 +2056,7 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
+                                
         
                                 if (day29[event.target.value] >= 0) {
         
@@ -1991,7 +2066,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot29', JSON.stringify(day29));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots29')) - 1;
                                         localStorage.setItem('FAvaliableSpots29', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx29').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots29"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -2007,7 +2084,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                    
                     case '2022-08-30':
                             if (localStorage.getItem('Fspot30') == null) //if it isnt existent
@@ -2048,7 +2125,7 @@ for (const cellD of cellDivs) {
                             selectTime = document.getElementById('time-selection');
         
                             selectTime.addEventListener('change', function handleChange(event) {
-                                console.log(event.target.value);
+                                
         
                                 if (day30[event.target.value] >= 0) {
         
@@ -2058,7 +2135,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot30', JSON.stringify(day30));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots30')) - 1;
                                         localStorage.setItem('FAvaliableSpots30', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx30').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots30"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -2075,7 +2154,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                                 break;                   
                     case '2022-08-31':
                             if (localStorage.getItem('Fspot31') == null) //if it isnt existent
@@ -2125,7 +2204,9 @@ for (const cellD of cellDivs) {
                                         localStorage.setItem('Fspot31', JSON.stringify(day31));
                                         let new_spots =  parseInt(localStorage.getItem('FAvaliableSpots31')) - 1;
                                         localStorage.setItem('FAvaliableSpots31', new_spots);
-        
+                                        if (new_spots == 0) {
+                                            hiding();
+                                        }
                                         let avals = document.querySelector('#bx31').querySelector('.aval-sp');
                                         let avaliableS = parseInt(localStorage.getItem("FAvaliableSpots31"));
                                         avals.innerHTML = `${avaliableS}`;
@@ -2142,7 +2223,7 @@ for (const cellD of cellDivs) {
         
                                 }
                               });
-                              console.log(localStorage);
+                              
                             break;
                 default:
                     break;

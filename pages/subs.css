@@ -498,7 +498,15 @@ footer {
 
 .services-title{
     font-size: 3.5em;
+    font-weight: 700;
+    gap: 320px;
+    padding: 140px;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    top: 55%;
 }
+
 #downArrow {
     width: 40px;
     height: 40px;
@@ -508,6 +516,21 @@ footer {
 
 
 @media screen and (max-width: 768px){
+
+
+.services-title{
+  font-size: 3em;
+  font-weight: 600;
+  gap: 290px;
+  padding: 120px;
+
+  top: 55%;
+}
+
+#downArrow {
+  width: 40px;
+  height: 40px;
+}
 
     .l{
         display: none;
@@ -566,20 +589,23 @@ footer {
       }
       
 
+
 }
 
 @media screen and (max-width: 576px){
 
-    #servicesIntro {
-        font-size: 2em;
-        gap: 28px;
-        padding: 34px;
-    }
-    #downArrow {
-        width: 30px;
-        height: 30px;
-    }
-          
+  .services-title{
+    font-size: 2em;
+    font-weight: 500;
+    gap: 200px;
+    padding: 80px;
+    top: 55%;
+  }
+  
+  #downArrow {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-height: 590px){
